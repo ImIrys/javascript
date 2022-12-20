@@ -1,2 +1,2 @@
 # javascript
-Pratice of functional programming using JS
+Pratice of functional programming using JS.
