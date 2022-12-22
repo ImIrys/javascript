@@ -1,2 +1,2 @@
-# javascript
-Pratice of functional programming using JS.
+# Javascript
+Praticando com JS
