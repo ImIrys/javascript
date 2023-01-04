@@ -41,7 +41,7 @@ var atribuicao = 'Irys';
 var comparacao = '0' == 0;
 console.log(comparacao);
 
-// comparação idêntica =mvalor e tipo idêntico
+// comparação idêntica = valor e tipo idêntico
 var comparacaoIdentica = '0' === 0;
 console.log(comparacaoIdentica); */
 
