@@ -1,14 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Variáveis</title>
+    <title>Vetores e Objetos</title>
+    <style>
+        code {
+            background-color: rgba(0, 0, 0, 0.848);
+            color: ghostwhite;
+            border-radius: 0.2em;
+        }
+    </style>
 </head>
 <body>
 
-<script src="script.js"></script>
+    <h1>Vetores ou arrays</h1>
+    <p>  
+        Arrays são uma matriz de variáveis (como se fosse um tipo de lista), em que cada variável tem um índice.
+    </p>
+    <p>
+        Podemos imaginar um array como uma caixa que possui várias outras caixas dentro e cada uma delas possui um valor.
+    </p>
+
+    <h2>Array</h2>
+    <p>
+        O array é declarado entre colchetes <strong>"[]"</strong>, e podem guardar qualquer valor dentro de seus índices (inclusive outros arrays).
+    </p>
+
+    <p>
+        <strong>Exemplo:</strong>
+        <em><code> array = ['string', 1, true, false, ['array1'], ['array2']...]</em></code>
+    </p>
+
+    <p>
+        <strong>Observação:</strong>
+        <br>Cada índice é separado por vírgula; 
+        <br>O índice só é acessado por um número inteiro, onde 0 é o primeiro índice.
+    </p>
+
+    <h2>Manipulando Arrays</h2>
+    <p>
+        O array possui uma série de métodos para manipulá-lo.
+        <h3>forEach()</h3>
+        <p>
+            Executa uma função para cada índice de um array. Faz uma repetição para cada item ou índice dentro de um array.
+        </p>
+
+        <p>
+            <strong>Exemplo:</strong>
+            <em><code>array.forEach(function(item, index){console.log(item, index)});</em></code>
+        </p>
+
+        <h3>push()</h3>
+        <p>
+            Adiciona item no final do array; insere um novo dado dentro do array
+        </p>
+        
+        <p>
+            <strong>Exemplo:</strong>
+            <em><code>array.push('novo item');
+            <br>console.log(array);</code></em>
+        </p>
+
+        <h3>pop()</h3>
+
+        <p>
+            Remove item no final do array
+        </p>
+
+        <p>
+            <strong>Exemplo:</strong>
+            <em><code>array.pop(); 
+            <br>console.log(array);</code></em>
+        </p>
+
+        <h3>shift()</h3>
+
+        <p>
+            Remove item no início do array
+        </p>
+
+        <p>
+            <strong>Exemplo:</strong>
+            <em><code>array.shift();
+            <br>console.log(array).</code></em>
+        </p>
+
+        <h3>unshift()</h3>
+
+        <p>
+            Adiciona item no início do array
+        </p>
+
+        <p>
+            <strong>Exemplo:</strong>
+            <em><code>array.unshift('novo item no início');
+            <br>console.log(array);</code></em>
+        </p>
+
+        <h3>indexOf()</h3>
+
+        <p>
+            Retorna o índice de um item dentro de um array.
+        </p>
+
+        <p>
+            <strong>Exemplo:</strong>
+            <em><code>console.log(array.indexOf(true));</code></em>
+        </p>
+
+        <h3>splice()</h3>
+
+        <p>
+            Remove ou substitui um item pelo índice
+        </p>
+
+        <p>
+            <strong>Exemplo:</strong>
+            <em><code>array.splice(0,3);
+            <br>console.log(array);</code></em>
+        </p>
+
+        <h3>slice()</h3>
+
+        <p>
+            Retorna uma parte de um array existente
+        </p>
+
+        <p>
+            <strong>Exemplo:</strong>
+            <em><code>let novoArray = array.slice(0,3);
+            <br>console.log(novoArray);</code></em>
+        </p>
+    </p>
+
+    <h2>Objetos</h2>
+        <p>
+            Dados que possuem <strong>propriedades</strong> e <strong>valores</strong> que definem suas características.</p>
+
+        <p>
+            Deve ser declarado entre chaves <strong>"{}"</strong>
+        </p>
+
+        <p>
+            <strong>Exemplo:</strong> Imagine uma xícara azul. Ela tem cor, pode ter vários tamanhos e funções. Pode ser declarada da seguinte forma:
+            <br><code>var xicara = {
+            <br>cor: 'azul', 
+            <br> tamanho: 'p', 
+            <br>funcao: tomarCafe()
+        <br>}</code>
+        </p>
+        
+    <h3>Manipulando objetos</h3>
+        <p>
+            Propriedades de objetos podem ser atribuídas à variáveis, facilitando a manipulação do objeto. Chamamos isso de <strong>desestruturação</strong>.
+        </p>
+
+        <p>
+            <strong>Exemplo</strong>
+            <br>
+            <code>var xicara = {cor: 'azul', tamanho: 'p', funcao: tomarCafe()}</code> 
+        </p>
+
+        <p>
+            <code>var cor = xicara.cor;</code>
+            <br>
+            <code>var tamanho = xicara.tamanho;</code>
+            <br>
+            <code>var funcao = tomarCafe(); </code>
+        </p>
+
+        <p>
+            <strong>Exemplo 2</strong></p>
+            <code>let object = { string: 'string', number: 1, boolean: true, array: 'array', objectInterno: { objectInterno: 'objeto interno'}};
+            <br>console.log(object);
+            </code>
+        </p>
+
+        <p>Outra forma de fazer a desestruturação é utilizando chaves ao declarar a variável</p>
+        <p>
+            <strong>Exemplo:</strong> <code>var {cor, tamanho, funcao} = xicara;</code>
+        </p>
+
+
+    <script src="script.js"></script>
     
 </body>
 </html>

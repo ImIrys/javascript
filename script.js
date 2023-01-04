@@ -1,106 +1,53 @@
-// tipos primitivos
+// Como se declara um Aray
+/* let array = ['string', 1, true, false, ['array1'], ['array2']];
+console.log(array); */
 
-// boolean
-/*var vOuF = false;
-console.log(typeof(vOuF));
+// Pode guardar vários tipos de dados
+let array = ['string', 1, true, ['array1'], ['array2'], ['array3'], ['array4']];
+/* console.log(array [3]); /* Como acessar o índice */
 
-// number 
-var numeroQualquer= 1;
-console.log(typeof(numeroQualquer));
+ // forEach - imprime o array e seu índice
+/*array.forEach(function(item, index){console.log(item, index)});
 
-// string ou caractere
-var nome = 'Irys';
-console.log(typeof(nome)); */
+// push - Insere um novo dado dentro do array 
+/* array.push('novo item');
+console.log(array); */
 
-// como declarar
-/* var variavel = 'Irys';
-variavel = 'Ellora';
-console.log(variavel); */
+// pop - Remove item no final do array
+/*array.pop(); 
+console.log(array);*/
 
-/* let variavel2 = 'Vakinha';
-variavel2 = 'Megan';
-console.log(variavel2); */
+// shift - Remove item no início do array 
+/* array.shift(); 
+console.log(array); */
 
-/* const constante = 'Irys';
-console.log(constante); */
+// unshift - adiciona um item no início do array
+/*array.unshift('novo item no início');
+console.log(array); */
 
-/*var escopoGlobal = 'global';
-console.log(escopoGlobal);
+// indexOf - Retorna o índice de um item dentro de um array
+/*console.log(array.indexOf(true)); */
 
-function escopoLocal () {
-    let escopoLocalInterno = 'local'
-    console.log(escopoLocalInterno);
-}
+// splice - remove u substitui um item por um índice
+/*array.splice(0,3);
+console.log(array);*/
 
-escopoLocal(); */
-
-/*// atribuição
-var atribuicao = 'Irys';
-
-// comparação
-var comparacao = '0' == 0;
-console.log(comparacao);
-
-// comparação idêntica =mvalor e tipo idêntico
-var comparacaoIdentica = '0' === 0;
-console.log(comparacaoIdentica); */
+// slice - retorna uma parte de um array existente
+/*let novoArray = array.slice(0,3);
+console.log(novoArray);*/
 
 
-/*// Operadores aritméticos
-// adição
-var adicao = 1 + 1;
-console.log(adicao);
+// Objetos
+let object = { string: 'string', number: 1, boolean: true, array: ['array'], objectInterno: { objectInterno: 'objeto interno'}};
 
-// subtração
-var subtracao = 1 - 1;
-console.log(subtracao);
+/*console.log(object.boolean); /*acessar as propriedades do objeto*/
 
-// multiplicação
-var multiplicacao = 2 * 3;
-console.log(multiplicacao);
+/*var string = object.string;
+console.log(string); */
 
-// divisão real
-var divisaoReal = 6 / 2;
-console.log(divisaoReal);
+// Formas de fazer desestruturação
+/*var arrayInterno = object.array;
+console.log(arrayInterno);*/
 
-// divisão inteira ou o resto da divisão
-var divisaoInteira = 5 % 2;
-console.log(divisaoInteira);
-
-// potenciação
-var potenciacao = 2 ** 10;
-console.log(potenciacao); */
-
-/*// Operadores relacionais - consultam a relação entre valores
-// maior que
-var maiorQue = 5 > 2;
-console.log(maiorQue);
-
-// menor que
-var menorQue = 5 < 2;
-console.log(menorQue);
-
-// maior ou igual a
-var maiorOuIgual = 5 >= 2;
-console.log(maiorOuIgual);
-
-// menor ou igual a
-var menorOuIgual = 5 <= 2;
-console.log(menorOuIgual); */
-
-// Operadores lógicos - consultam valores lógicos
-// && - "e" - considera que todos os valores sejam true
-var e = true && false;
-console.log(e);
-
-// || - "ou" - considera que qualquer valor seja true
-var ou = true || false;
-console.log(ou);
-
-// ! - "não" - inverte o valor de true para false ou vice-versa
-var nao = !true;
-console.log(nao);
-
-
-
-
+var { string, boolean, objectInterno} = object;
+console.log(string, boolean, objectInterno);
