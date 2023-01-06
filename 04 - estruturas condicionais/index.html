@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas Condicionais</title>
+</head>
+<body>
+    <div>
+        <h1>Estruturas Condicionais</h1>
+            <h2>O que são?</h2>
+                <p>
+                    São instruções para realizar determinadas tarefas a partir de uma condição, seja de repetição ou decisão.</p>
+                <p>
+                    Exemplo: Em um jogo de futebol é preciso alterar o placar toda vez que um time marcar gol.</p>
+                <p>
+                    O JavaScrip pode fazer essa verificação através de algumas palavras reservadas, como a seguir
+                </p>
+            <h2>Estruturas de Decisão</h2>
+                <ul >
+                    <li>
+                        If
+                    </li>
+                    <li>
+                        Else
+                    </li>
+                    <li>
+                        Else if
+                    </li>
+                    <li>
+                        If ternário
+                    </li>
+                    <li>
+                        Switch/case
+                    </li>
+                </ul>
+                <h3>if</h3>
+                    <p>
+                        Usa-se a palavra reservada <strong>"if"</strong> para estabelecer uma condição: 
+                    </p>
+                    <p>
+                        Exemplo: <br> 
+                            <code>
+                                var time1 = 0; <br>
+                                var time2 = 0; <br>
+                                
+                                if (time1 > 0) { <br>
+                                    console.log('O time 1 marcou um gol!');
+                                }
+                            </code>
+                    </p>
+                <h3>else</h3>
+                    <p>
+                        Quando a condição estabelecida não é atendida usa-se o <strong>"else"</strong>:
+                    </p>
+                    <p>
+                        Exemplo: <br>
+                            <code>
+                                var time1 = 0; <br>
+                                var time2 = 0; <br>
+                                
+                                if (time1 > 0) { <br>
+                                    console.log('O time 1 marcou um gol!');
+                                } else {
+                                    console.log('Nenhum dos times marcou gol.');
+                                }
+                            </code>
+                    </p>
+                <h3>else if</h3>
+                    <p>
+                        Quando existe mais de uma condição usa-se o<strong>"else if"</strong>:
+                    </p>
+                    <p>
+                        Exemplo: <br>
+                            <code>
+                                var time1 = 1; <br>
+                                var time2 = 0; <br>
+                                
+                                if (time1 > 0) { <br>
+                                    console.log('O time 1 marcou um gol!'); <br>
+                                } else if (time2 > 0) { <br>
+                                    console.log('O time 2 marcou gol!'); <br>
+                                } else { <br>
+                                    console.log('Nenhum time marcou gol.')
+                                }
+                            </code>
+                    </p>
+                <h3>Ninho de if</h3>
+                    <p>
+                        Quando usa-se o<strong>"if"</strong> dentro de outro <strong>"if"</strong>, isso é chamado de <strong>Aninhamento de if's</strong> ou <strong>Ninho de if's</strong>.
+                    </p>
+                    <p>
+                        Exemplo: <br>
+                            <code>
+                                if (time1 = -1) { <br>
+                                    if (time 1 > 0) { <br>
+                                        console.log('O time 1 marcou um gol!'); <br>
+                                    } else { <br>
+                                        console.log('Nenhum time marcou gol.'); <br>
+                                    } <br>
+                                } else { <br>
+                                    console.log('Time inválido.') <br>
+                                }
+                            </code>
+                    </p>
+                <h3>if ternário</h3>
+                    <p>
+                        É possível fa\zer uma verificação em uma única linha usando o <strong>"if"</strong> ternário:
+                    </p>
+                    <p>
+                        Exemplo: 
+                            <code>
+                                [condição] ? [instrução1] : [instrução2]; <br>
+                                time1 > 0 ? console.log('marcou gol') : console.log('não marcou gol');
+                            </code>
+                            <p>
+                                <strong>Obs:</strong> É importante usar a interrogação <strong>"?"</strong> e dois pontos <strong>":"</strong>
+                            </p>
+                            
+                <h3>switch/case</h3>
+                    <p>
+                        O <strong>"switch/case"</strong> também funciona como uma estrutura condicional:
+                    </p>
+                    <p>
+                        Exemplo: <br>
+                            <code>
+                                switch (${expressao}) { <br>
+                                    case 1: <br>
+                                        ${instrucao}; <br>
+                                    break; <br>
+                                    case 2: <br>
+                                        ${instrucao}; <br>
+                                    break; <br>
+                                    }
+                            </code>
+                    </p>
+    </div>
+    <div>
+        <h2>Laços de Repetição</h2>
+            <p>
+                São estruturas condicionais que repetem uma instrução até atingir determinada condição:
+            </p>
+            <ul>
+                <li>
+                    For;
+                </li>
+                <li>
+                    For/in;
+                </li>
+                <li>
+                    For/of;
+                </li>
+                <li>
+                    While;
+                </li>
+                <li>
+                    Do/while
+                </li>
+            </ul>
+            <h3>For</h3>
+                    <p>
+                        Funciona como uma repetição de instrução até que a condição se torne falsa: 
+                    </p>
+                    <p>
+                        <code>
+                            for ([expressaoInicial]; [condicao]; [incremento]{
+                                declaracao
+                            }
+                        </code>
+                    </p>
+                    <p>
+                        Exemplo: <br> 
+                            <code>
+                                var array = ['valor1', 'valor2', 'valor3', 'valor4'] <br>
+                                for (let i = 0; i < array.length; i++) { <br>
+                                    console.log(i);
+                                } <br>
+                            </code>
+                    </p>
+            <h3>For/in</h3>
+                <p>
+                    Funciona como uma repetição a partir de uma propriedade: 
+                </p>
+                <p>
+                    <code>
+                        for ([indice] in [objeto ou array]) {
+                            declaracao
+                        }
+                    </code>
+                </p>
+                <p>
+                    Exemplo: <br> 
+                        <code>
+                            var array = ['valor1', 'valor2', 'valor3', 'valor4'] <br>
+                                for (let i in array) { <br>
+                                    console.log(i);
+                                }
+                        </code>
+                </p>
+            <h3>For/of</h3>
+                <p>
+                    Funciona como uma repetição a partir de um valor: 
+                </p>
+                <p>
+                    <code>
+                        for ([indice] of [array]) {
+                            declaracao
+                        }
+                    </code>
+                </p>
+                <p>
+                    Exemplo: <br> 
+                        <code>
+                            var array = ['valor1', 'valor2', 'valor3', 'valor4'] <br>
+                                for (i of array) { <br>
+                                    console.log(i);
+                                }
+                        </code>
+                </p>
+                <p>
+                    Observação: O <strong>For/of</strong> não funciona com objetos pois as propriedades variam, diferentes do índice em um array que sempre serão números inteiros.
+                </p>
+                <p>
+                    Se ainda sim for preciso pegar o  valor, faz-se o seguinte:
+                </p>
+                <p>
+                    Exemplo: <br>
+                    <code>
+                        for (i of object.propriedade) {
+                            console.log(i);
+                        }
+                    </code>
+                    <p>
+                        Observação 2: Porém cada caractere dentro do valor será impresso em linhas separadas.
+                    </p>
+            <h3>While</h3>
+                <p>
+                    Executa uma instrução <strong>"enquanto"</strong> determinada condição for verdadeira, a verificação é feita <strong>antes</strong> da execução:
+                </p>
+                <p> Exemplo:
+                    <code> <br>
+                        var a = 0; <br>
+                        while (a < 10) { <br>
+                            a++ <br>
+                            console.log(a); <br>
+                        } <br>
+                    </code> 
+                </p>
+                <p>
+                    OBS: como ler: Enquanto a variável <strong>a</strong> for menor que 10, irá receber mais um e imprimir no console.
+                </p>
+            <h3>Do/while</h3>
+                <p>
+                    Executa uma instrução <strong>"até que"</strong> determinada condição seja falsa, a verificação é feita <strong>depois</strong> da execução:
+                </p>
+                <p> Exemplo:
+                    <code> <br>
+                        var a = 0; <br>
+                        do { <br>
+                            a++ <br>
+                            console.log(a); <br>
+                        } while (a < 10) <br>
+                    </code> 
+                </p>
+                <p>
+                    OBS: como ler: A variável <strong>a</strong> receberá mais um e imprimir no console <strong>até que</strong> seu valor chegue a 10.
+                </p>
+    </div>
+            
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

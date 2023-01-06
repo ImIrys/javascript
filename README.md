@@ -1,2 +1,0 @@
-# Javascript
-Praticando com JS
