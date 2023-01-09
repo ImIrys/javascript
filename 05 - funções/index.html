@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções e particularidades</title>
+
+</head>
+<body>
+    <div>
+        <h1>Funções</h1>
+        <h2>O que são?</h2>
+            <p>
+                Blocos de comandos e instruções para a execução de determinadas tarefas:
+            </p>
+            <p>
+                Exemplo: <br>
+                <code>
+                    function nomeDaFuncao() { <br>
+                        ${instrucao}; <br>
+                    } <br><br>
+                    
+                    nomeDaFuncao();
+                </code>
+            </p>
+        <h2>Como declarar?</h2>
+            <p>
+                Utiliza-se a palavra reservada <strong>"function"</strong> seguida de parênteses <strong>"()"</strong> e chaves <strong>"{}"</strong>:
+            </p>
+            <p>
+                Exemplo: <br>
+                <code>
+                    function funcao(){ <br>
+                        console.log("mensagem"); <br>
+                    } <br><br>
+
+                    funcao();
+                </code>
+            </p>
+            <p>
+                OBS: <br>
+                <strong>
+                    () - indica que é um objeto do tipo function; <br>
+                    {} - indica que é um bloco de instrução.
+                </strong>
+            </p>
+    </div>
+    <div>
+        <h1>Funções com parâmetros</h1>
+        <h2>O que são?</h2>
+            <p>
+                Funções podem receber em sua declaração, parâmetros, que servem como variáveis, onde sua atribuição pode ser feita durante a chamada da função:
+            </p>
+            <p>
+                Exemplo: <br>
+                <code>
+                    function nomeDaFuncao(parametro){ <br>
+                        ${instrucao}; <br>
+                    } <br><br>
+
+                    nomeDaFuncao(valorDoParametro);
+                </code>
+            </p>
+            <p>
+                Exemplo: <br>
+                <code>
+                    function mensagem(primeiro, segundo) { <br>
+                        console.log(primeiro, segundo); <br>
+                    } <br><br>
+
+                    mensagem('Tudo certo', 'pessoal!');
+                </code>
+            </p>
+    </div>
+    <div>
+        <h1>Tipos de função</h1>
+        <h2>Funções declarativas</h2>
+            <p>
+                Funções que possuem o uso mais comum, deve ser declarada usando a palavra reservada <strong>"function"</strong> seguida do <strong>nome da função</strong>, parênteses <strong>"()"</strong> e chaves <strong>"{}"</strong>:
+            </p>
+            <p>
+                Exemplo: <br>
+                <code>
+                    function nomeDaFuncao(){ <br>
+                        ${instrucao}; <br>
+                    } <br>
+
+                    nomeDaFuncao();
+                </code>
+                <p>
+                    OBS: <strong>O nome da função é obrigatório.</strong>
+                </p>
+            </p>
+        <h2>Expressões de Funções</h2>
+            <p>
+                Funções atribuídas à expressões. A nomeação das funções por expressão é opcional:
+            </p>
+            <p>
+                Exemplo 1: <br>
+                <code>
+                    var funcao = function nomeDaFuncao(){ <br>
+                        ${instrucao}; <br>
+                    } <br>
+                </code>
+            </p>
+            <p>
+                Exemplo 2: <br>
+                <code>
+                    var funcao = function(){ <br>
+                        ${instrucao}; <br>
+                    }; <br>
+                </code>
+            </p>
+        <h2>Arrow Function</h2>
+            <p>
+                Funções de expressão de sintaxe curta. Arrow functions sempre serão anônimas, e por isso não podem ser nomeadas.
+            </p>
+            <p>
+                Deve ser declarada com parênteses <strong>"()"</strong>, seguido de <strong>"=>"</strong> e depois chaves <strong>"{}"</strong>.
+            </p>
+            <p>
+                Exemplo: <br>
+                <code>
+                    var funcao = () => { <br>
+                        ${instrucao}; <br>
+                    } <br>
+                </code>
+            </p>
+        <h2>Funções Aritméticas</h2>
+        <h3>Criando uma calculadora</h3>
+            <p>
+                Para este exercício será utilizado alguns métodos nativos do JavaScript:
+            </p>
+            <ul>
+                <li>Number() - para converter valores em números;</li>
+                <li>Prompt() - para registrar entradas de ususário;</li>
+                <li>Alert() - para mostrar mensagem ao usuário;</li>
+                <li>Template Strings - para usar strings junto com expressões.</li>
+            </ul>
+
+    </div>
+    <script src="funcoes.js"></script>
+    <script src="calculadora.js"></script>
+</body>
+</html>
