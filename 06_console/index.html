@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console</title>
+
+</head>
+<body>
+    <div>
+        <h1>Console</h1>
+            <p>
+                É possível utilizar o console de 2 formas:
+                <ul>
+                    <li>Numa página da Web</li>
+                    <li>No Terminal</li>
+                </ul>
+            </p>
+            
+        <h2>Console numa página da Web</h2>
+            <p>
+                Em seu navegador (utilizei o Chrome) ao clicar com o botão direto do mouse e clicar em <strong>"Inspecionar"</strong>, abrirá uma página cheia de ferramentas. Em uma das abas, encontra-se o <strong>Console</strong>.
+            </p>
+            <p>
+                Ao clicar no <strong>Console</strong>, aparecerá uma tela em branco. Nessa tela, é possível escrever coisas. Por exemplo, é possível declarar variáveis e fazer operações com ela. Também é possível declarar e testar funções e outras operações.
+            </p>
+            <p>
+                Geralmente, utilizamos o console numa página da Web quando estamos criando uma aplicação Web e/ou lidando com andamentos Client Side (elementos que serão apresentados para o cliente ou usuário, como interface ou coisas interativas).
+            </p>
+
+        <h2>Console no Terminal</h2>
+            <p>
+                Outra forma de utilizar o console é utilizando o <strong>Node Js</strong>. 
+            </p>
+            <p>
+                O Node Js é uma ferramenta que ajudará a rodar o JavaScript do lado do servidor (da pessoa que está desenvolvendo).
+            </p>
+            <p>
+                Em qualquer terminal será possível utilizar o console e visualizar o output do código JavaScript.
+            </p>
+            <p>
+                No VSCode, no arquivo javascript, na linha 1 chame o console da seguinte forma:
+            </p>
+            <p>
+                <code>
+                    console.log('dizer o que quero ver');
+                </code>
+            </p>
+            <p>
+                Exemplo: <br>
+                <code>console.log('Hello World!')</code> 
+            </p>
+            <p>
+                Abra um novo terminal. Para visualizar o output do código javascript será necessário entrar no local onde esse arquivo está salvo.
+            </p>
+            <p>
+                No terminal, para visualizar onde você está digite <code><strong>ls</strong></code>.
+            </p>
+            <p>
+                Digitar <code><strong>cd + nome da pasta/</strong></code> e apertar <strong>Enter</strong>.
+            </p>
+            <p>
+                Fazer isso (cd+nome da pasta/) até encontrar a pasta que está o arquivo js.
+            </p>
+            <p>
+                Após encontrar o arquivo js, digitar <code><strong>node + nome do arquivo.js</strong></code> para rodar o arquivo js. E ele vai mostrar a mensagem contida no console.log.
+            </p>
+            <p>
+                Basicamente, é dessa forma que será possível ver o <strong>output</strong> do console no terminal.
+            </p>
+            <p>
+                <strong>OBS: Dessa forma não é possível ver em tempo real como no console na página web. </strong>
+            </p>
+            <p>
+                <strong>Exemplo:</strong>
+            </p>
+            <p>
+                <code>
+                    function returnEvenValues(array) { <br>
+                        let evenNums = []; <br>
+                        for(let i = 0; i < array.length; i++) { <br>
+                            if(array[i] % 2 === 0) { <br>
+                                evenNums.push(array[i]); <br>
+                            }   else { <br>
+                                console.log(`${array[i]} não é par!`); <br>
+                            } <br>
+                        } <br>
+                        console.log('Os números pares são:', evenNums); <br>
+                    } <br>
+
+                    let array = [1, 2, 4, 5, 7, 8]; <br>
+                    <br>
+                    returnEvenValues(array);
+                </code>
+            </p>
