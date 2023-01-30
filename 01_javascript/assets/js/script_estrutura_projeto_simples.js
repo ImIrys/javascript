@@ -1,0 +1,1 @@
+console.log('Hello World! This is me, life should be fun for everyone! :)')

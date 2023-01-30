@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/01_javascript/assets/css/style.css">
+    <title>JavaScript na Web</title>
+</head>
+<body>
+    <div>
+        <h1>JavaScript na Web</h1>
+            <ol>
+                <li>Estrutura de projeto simples</li>
+                <li>Inserção do Javascript no HTML</li>
+                <li>Interação com elementos HTML no DOM</li>
+            </ol>
+    </div>
+    <div>
+        <h2>1. Estrutura de projeto simples</h2>
+            <p>
+                Veremos uma estrutura de projeto básica para a criação de projetos que utilizam JavaScript, HTML e CSS.
+            </p>
+            
+            <p> 
+                <ul>
+                    <li>Index</li>
+                </ul>
+                O <strong>index</strong>, que significa <strong>índice</strong> em inglês, é o nome padrão utilizado para o local onde fica a entrada principal do código. É o lugar onde teremos acesso às diferente páginas (atalhos para as outras páginas).
+            </p>
+            <p>
+                <ul>
+                    <li>Arquitetura</li>
+                </ul>
+                Comumente, quando se tem projetos que utilizam diversos tipos de arquivos é preciso separá-los por pastas. Isso é uma noção básica de Arquitetura.
+            </p>
+            <p>
+                A arquitetura é como está desenhada toda a estrutura dos arquivos do projeto. 
+            </p>
+            <p>
+                <ul>
+                    <li>Assets</li>
+                </ul>
+                Assets são, basicamente, todos os componentes da página HTML (arquivos em css, javascript e etc) e que não são arquivos HTML.
+            </p>
+            <p>
+                O arquivo HTML é o principal, então deve ficar na raíz do projeto, separado dos outros arquivos.
+            </p>
+            <p>
+                <strong>OBS: Essas nomenclaturas básicas são dadas para projetos pequenos e iniciantes.</strong>
+            </p>
+    </div>
+    <div>
+        <h2>2. Inserção do Javascript no HTML</h2>
+            <p>
+                <ul>
+                    <li>Inserindo arquivo CSS</li>
+                </ul>
+            </p>
+            <p>
+                Dentro da tag <code>head</code>, antes da tag <code>title</code>, inserir a tag <code>link</code>.Essa tag contêm 2 atributos: <code>rel</code> e <code>href</code>.
+            </p>
+            <p>
+                O <code>rel</code> significa o relacionamento que existe entre o arquivo que será chamado (<code>style.css</code>) e o arquivo no qual estarei o chamando (<code>index.html</code>).
+                O relacionamento dela com ele é que ela é uma <code>stylesheet</code>
+            </p>
+            <p>
+                O <code>href</code> é a referência, onde está localizado esse arquivo.
+            </p>
+            <p>
+                Exemplo:
+                <code>link rel="stylesheet" href="style.css" /> </code>
+            </p>
+            <p>
+                OBS: Em alguns arquivos javascript ou bibliotecas que forem baixadas pode ser aconselhado colocar esses arquivos <strong>antes</strong> do encerramento da tag <code>html</code>. Porque quando o documento é renderizado na web ele será lido proceduralmente de cima para baixo. E se houver um script muito grande, ele começará a rodar e provavelmente buscará interagir com elementos da tela que não foram renderizados.
+           </p>
+           <p>
+            <ul>
+                <li>Inserindo arquivo Javascript</li>
+            </ul>
+                A tag utilizada para arquivos javascript é a <code>script</code>.
+                O atributo que indica origem é o <code>src</code>
+           </p>
+    </div>
+    <script src="/01_javascript/assets/js/script_estrutura_projeto_simples.js "></script>
+</body>
+</html>
+            
+
