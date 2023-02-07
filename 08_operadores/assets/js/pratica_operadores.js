@@ -7,7 +7,7 @@
 
 // 1º Criar uma função que receba 2 números como parâmetros;
 function comparaNumeros(num1, num2) {
-/*validação */
+/*validação*/
     if(!num1 || !num2) 
     return "Defina 2 números!";
 
