@@ -5,12 +5,232 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Variáveis</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
+    <div class="atribuicaoValores">    
+        <h1 class="tituloPrimario">Atribuição de valores</h1>
+            <p>
+                Existem convenções e boas práticas em qualquer linguagem de programação. No JavaScript, as mais utilizadas são:
+            </p>
+            <p>
+                <ul>
+                    <li>Camel Case</li>
+                    <li>Upper Case Snake Case ou Upper  Snake Case</li>
+                    <li>Kebab Case</li>
+                    <li>Snake Case</li>
+                    <li>Pascal Case</li>
+                    <li>Original Variable as String</li>
+                </ul>
+            </p>
 
+        <h2 class="tituloSecundario">Camel Case</h2>
+            <p>
+                No JavaScript usa-se muito o termo <strong><em>Camel Case</em></strong>, principalmente quando estamos <strong><em>declarando funções e variáveis.</em></strong>
+            </p>
+            
+            <p> 
+                No Camel Case, ao criar uma variável que possui mais de uma palavra faz-se o seguinte:
+                <ol>
+                    <li>A palavra que representa essa variável será escrita tudo junto, sem espaço, sem traços.</li>
+                    <li>Com exceção da 1ª palavra, cada palavra seguinte será escrita com a 1ª letra em maiúscula.</li>
+                    <li>Exemplo: <code>criandoVariavelExemplo</code></li>
+                </ol>
+            </p>
 
+        <h2 class="tituloSecundario">Upper Snake Case</h2>
+            <p>
+                Basicamente, todas as letras em maiúscula e as palavras são separadas por underline "_".
+            </p>
+            <p>
+                De acordo com as boas práticas, o Upper Snake Case é utilizado para <strong><em>constantes</em></strong>.
+            </p>
+            <p>
+                Exemplo:
+                <code>
+                    CRIANDO_VARIAVEL_EXEMPLO
+                </code>
+            </p>
+        
+        <h2 class="tituloSecundario">Kebab Case</h2>
 
-<script src="variaveis.js"></script>
+        <h2 class="tituloSecundario">Snake Case</h2>
+
+        <h2 class="tituloSecundario">Pascal Case</h2>
+
+        <h2 class="tituloSecundario">Original Variable as String</h2>
+    </div>
+    
+    <div class="sobreVariaveis">
+        <h1 class="tituloPrimario">Variáveis</h1>
+            <p>
+                Para declarar valores dinâmicos, que podem ser modificiados ao longo do ciclo de vida do código, podemos utilizar as seguintes palavras reservadas do JavaScript: <strong><em><code>Var e Let</code></em></strong>
+            </p>
+            <p>
+                Ao codar, o ideal é utilizar o <code>let</code>. 
+            </p>
+        
+        <h2 class="tituloSecundario">Let</h2>
+            <p>
+                Ela tem o <strong><em>Escopo de Bloco</em></strong>
+            </p>
+            <p>
+                Exemplo: <br>
+                <code>
+                    var a = 1; <br>
+                    var b = 2; <br><br>
+                    if (a === 1) { <br>
+                        var a = 11; // o escopo é global<br>
+                        let b = 22; // o escopo é dentro do bloco if<br><br>
+
+                        console.log(a); // 11 <br>
+                        console.log(b); // 22 <br>
+                    } <br>
+
+                    console.log(a); // 11 <br>
+                    console.log(b); // 2
+                </code>
+            </p>
+            
+        
+        <h2 class="tituloSecundario">Var</h2>
+            <p>
+                Ela tem o <strong><em>Escopo Global</em></strong>
+            </p>
+            <p>
+                Exemplo: <br>
+                <code>
+                    var a = 1; <br>
+                    var b = 2; <br><br>
+                    if (a === 1) { <br>
+                        var a = 11; // o escopo é global<br>
+                        let b = 22; // o escopo é dentro do bloco if<br><br>
+
+                        console.log(a); // 11 <br>
+                        console.log(b); // 22 <br>
+                    } <br>
+
+                    console.log(a); // 1 <br>
+                    console.log(b); // 2
+                </code>
+            </p>
+        <h3 class="tituloTerciario">Hoisting</h3>
+            <p>
+                Atribuição de um valor a uma variável antes de declará-la. Isso só acontece com a palavra <em>var</em> (quando falamos de atribuição de valores, pois as <em>funções</em> também possuem essa propriedade e funcionalidade).
+            </p>
+            <p>
+                Exemplo usando <code>var</code> <br>
+                <code>
+                    numberOne = 1; // é uma atribuição <br><br>
+
+                    console.log(numberOne + 2);<br><br>
+
+                    var numberOne; // declaração da variável veio depois. No Hoisting, quando se tem uma variável global, o JavaScript leva para cima, automaticamente, a declaração da variável que veio depois. 
+
+                </code>
+            </p>
+            <p>
+                Exemplo usando <code>let</code> <br>
+                <code>
+                        numberOne = 1; <br><br>
+    
+                        console.log(numberOne + 2);<br><br>
+    
+                        let numberOne; // não vai rodar, dará erro. Pois, o let não possui a funcionalidade que existe na var. Sempre que tiver o let é necessário declarar antes.
+                </code>
+            </p>
+            <p>
+                <code>
+                    let numberOne; <br><br>
+
+                    numberOne = 1; <br><br>
+
+                    console.log(numberOne + 2);
+                </code>
+            </p>
+        
+        <h3 class="tituloTerciario">Redeclaração e Reatribuição</h3>
+            <p>
+                Só acontece com a <em>var</em> (não podemos redeclarar o <em>let</em>, porém podemos reatribuir)
+            </p>
+            
+        <h4 class="tituloQuaternario">Qual a diferença entre <em>Declaração</em> e <em>Reatribuição</em>?</h4>
+             <p>
+                <strong><em>Declaração</em></strong> é escrever <code>var</code> ou <code>let</code> mais o nome da variável e igualar a alguma coisa ou igualar a nada.
+                </p>
+            <p>
+                <strong><em>Reatribuição</em></strong> é só o nome da variável sem a palavra reservada na frente (<code>var</code> ou <code>let</code>) e igualar aum outro valor.
+            </p>
+        
+        <h3 class="tituloTerciario">camelCase</h3>
+            <p>
+                As variáveis são todas declaradas utilizando o camelCase.
+            </p>
+    </div>
+
+    <div class="sobreConstantes">
+        <h1 class="tituloPrimario">Constantes</h1>
+            <p>
+                <ul>
+                    <li>Declaradas em UPPER_SNAKE_CASE;</li>
+                    <li>Possuem Escopo de Bloco;</li>
+                    <li>Não faz <em>Hoisting;</em></li>
+                    <li>Não pode ter seu valor redeclarado e reatribuido, pois, por ser uma constante, seu valor não muda.</li>
+                </ul>
+            </p>
+            <p>
+                Exemplo: <br>
+                <code>
+                    const FIRST_NAME = "Fiorela"; // Declaração em UPPER_SNAKE_CASE. <br><br>
+
+                    console.log(FIRST_NAME);
+                </code>
+            </p>
+    </div>
+
+    <div class="sobreResumo">
+        <h1 class="tituloPrimario">Resumindo</h1>
+            <p>
+                Segue um resumo sobre <em>var, let e const</em>:
+            </p>
+            <table id="tabelaResumo" class="tabelaSobreResumo" style="width: 50%">
+                <tr>
+                    <th></th>
+                    <th>var</th>
+                    <th>const</th>
+                    <th>let</th>
+                </tr>
+                <tr>
+                    <td>escopo</td>
+                    <td>Global ou Local</td>
+                    <td>Bloco</td>
+                    <td>Bloco</td>
+                </tr>
+                <tr>
+                    <td>Redeclaração</td>
+                    <td>SIM</td>
+                    <td>NÃO</td>
+                    <td>NÃO</td>
+                </tr>
+                <tr>
+                    <td>Reatribuição</td>
+                    <td>SIM</td>
+                    <td>NÃO</td>
+                    <td>SIM</td>
+                </tr>
+                <tr>
+                    <td>Hoisting</td>
+                    <td>SIM</td>
+                    <td>NÃO</td>
+                    <td>NÃO</td>
+                </tr>
+            </table>
+    </div>
+    <script src="variaveis.js"></script>
     
 </body>
 </html>
