@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Dados</title>
+</head>
+<body>
+    <div class="estruturaDados">
+        <h1 class="tituloPrimario">Estrutura de Dados</h1>
+            <p class="textoConteudo">
+                O JavaScript é uma linguagem de <strong>tipagem dinâmica</strong>. Ou seja, antes de declarar um valor, <strong>não</strong> é necessário especificar o <strong>tipo</strong> dele.
+            </p>
+            <p class="textoObservacao">
+                <strong>Observação: </strong>Sempre que quiser verificar o tipo de algum dado é só digitar: <strong><code class="codeStyle">typeof variavel</code></strong>
+            </p>
+    </div>
+    
+    <div class="estruturaDadosTipos">
+        <div class="tiposDados">
+            <h2 class="tituloSecundario">Tipos</h2>
+                <p class="textoConteudo">
+                    Existem 2 tipos de dados em JavaScript:
+                </p>
+                <ol class="listaConteudo">
+                    <li>Dados Primitivos</li>
+                    <li>Dados Compostos</li>
+                </ol>
+        </div>
+
+        <div class="dadosPrimitivos">
+            <h3 class="tituloTerciario">Dados Primitivos</h3>
+                <ol class="listaConteudo">
+                    <li>Não possuem método dentro deles</li>
+                    <li>Escritos com letras minúsculas</li>
+                </ol>
+                <p class="textoConteudo">
+                    Podem ser:
+                </p>
+                <ul class="listaConteudo">
+                    <li>String</li>
+                    <li>Números</li>
+                    <li>Valor Booleano (true/false)</li>
+                    <li>Null</li>
+                    <li>Undefined</li>
+                </ul>
+        </div>
+
+        <div class="dadosNaoPrimitivos">
+            <h3 class="tituloTerciario">Dados Não Primitivos</h3>
+                <ul class="listaConteudo">
+                    <li>Objetos</li>
+                    <li>Arrays</li>
+                </ul>
+        </div>
+
+        <div class="dadosPrimitivosStrings">
+            <div class="conteudoStrings">
+                <h2 class="tituloSecundario">Strings</h2>
+                <ol class="listaConteudo" type="1">
+                    <li>Utilizada para textos</li>
+                    <li>Valores são declarados entre aspas " " ou crases ` `</li>
+                    <li>Pode ser usada como objeto</li>
+                    <li>É um tipo de dado iterável</li>
+                </ol>
+                <p class="textoExemplo">Exemplo:</p>
+                <pre>
+                    <code class="codeStyle">
+                        let nome = "Valentina";
+                        let sobrenome = "Sobral";
+                    </code>
+                </pre>
+            
+                <div class="conteudoStringConcat">
+                    <h3 class="tituloTerciario">Concatenação de strings</h3>
+                    <p class="textoExemplo"></p>
+                    <pre>
+                        <code class="codeStyle">
+                            nome.concat(sobrenome);
+                            let concatenado = nome.concat(sobrenome);
+
+                            console.log(concatenado); // vai aparecer "ValentinaSobral"
+                        </code>
+                    </pre>
+
+                    <h3>Outras formas de concatenação</h3>
+                    <p class="textoExemplo"><strong>Exemplo: aparecer "Valentina Sobral"</strong></p>
+                    <p class="textoExemplo">1ª forma:</p>
+                    <pre>
+                        <code class="codeStyle">
+                            concatenado = nome + " " + sobrenome;
+                            
+                            console.log(concatenado);
+                        </code>
+                    </pre>
+                    <p class="textoExemplo">2ª forma:</p>
+                    <pre>
+                        <code class="codeStyle">
+                            concatenado = `${nome} ${sobrenome}`;
+
+                            console.log(concatenado);
+                        </code>
+                    </pre>
+                    <p class="textoExemplo">
+                        <strong>Exemplo: aparecer <br> "Valentina" <br> "Sobral" </strong>
+                    <p class="textoExemplo">1ª forma:</p>
+                    <pre>
+                        <code class="codeStyle">
+                            concatenado = nome + "\n" + sobrenome;
+
+                            console.log(concatenado);
+                        </code>
+                    </pre>
+                    <p class="textoExemplo">2ª forma:</p>
+                    <pre>
+                        <code class="codeStyle">
+                            concatenado = `${nome} 
+                            ${sobrenome}`;
+
+                            console.log(concatenado);
+                        </code>
+                    </pre>
+                </div>
+            
+                <div class="conteudoStringObjeto">
+                    <h3 class="tituloTerciario">String como objeto</h3>
+                    <p class="textoExemplo">Exemplo 1:</p>
+                    <pre>
+                        <code class="codeStyle">
+                            let exemplo = "Hello" // declaração de um tipo primitivo
+                        </code>
+                    </pre>
+                    <p class="textoExemplo">Exemplo 2:</p>
+                    <pre>
+                        <code class="codeStyle">
+                            let exemplo = new String ("Hello") // String com letra maiúscula é um objeto.
+                        </code>
+                    </pre>
+                    <p class="textoConteudo">
+                    No exemplo 2, a variável <strong><code>exemplo</code></strong> retornará um objeto do tipo String, com tudo o que está dentro dos índices. Também virá algumas propriedades dentro do <strong><code>prototype</code></strong> (possui todos os métodos que podemos utilizar numa String.)
+                    </p>
+                    <p class="textoObservacao">
+                    <strong>Observação: </strong> Não tem problema se quisermos utilizar os métodos dos <strong>objetos String</strong> dentro do <strong>tipo primitivo string</strong>. Porém, é preciso entender que existe a diferença que o <strong>objeto String</strong> é muito maior do que o <strong>tipo primitivo string</strong> (mais rápido para compilar e ler).
+                    </p>
+                </div>
+
+                <div class="conteudoStringIteravel">
+                    <h3 class="tituloTerciario">String como dado iterável</h3>
+                    <p class="textoConteudo">É possível verificar o que existe em cada índice, em cada caractere da String.</p>
+                    <p class="textoExemplo">Exemplo: Saber o que está no índice 1</p>
+                    <pre>
+                        <code class="codeStyle">
+                            nome = "Irys";
+                            nome[1] // será a letra "r"
+                        </code>
+                    </pre>
+                    <p class="textoExemplo">Exemplo: Porém, quando perguntamos o tamanho da variável:</p>
+                    <pre>
+                        <code class="codeStyle">
+                            nome.length // aparecerá o valor "4"
+                        </code>
+                    </pre>
+                    <p class="textoObservacao"><strong>Observação:</strong> Não confundir tamanho (começa sempre do 1) com índice (começa sempre do 0).                
+                    </p>
+                </div>         
+
+                <div class="conteudoComplementar">
+                    <h3 class="tituloTerciario">Printar aspas ""</h3>
+                    <p class="textoConteudo">Imprimir o valor de ""</p>
+                    <p class="textoExemplo">Exemplo:</p>
+                    <pre>
+                        <code class="codeStyle">
+                            concatenado = "\"";
+                            console.log(concatenado);
+                        </code>
+                    </pre>
+
+                    <h3 class="tituloTerciario">Outros métodos</h3>
+                    <h4 class="tituloQuaternario">Método split</h4>
+                        <p class="textoConteudo">O  <strong>método <code>split</code></strong> vai separar os argumentos da string e vai retornar os valores dessa frase, não modifica a variável.</p>
+                        <p class="textoExemplo">Exemplo: ao passar uma string vazia, o split vai separar tudo (cada espaço, cada vírgula).</p>
+                            <pre>
+                                <code class="codeStyle">
+                                    let frase = "Olá, mundo.";
+                                    frase.split("");
+                                </code>
+                            </pre>
+                        <p class="textoObservacao">Observação: ao passar uma string com espaço, o split vai separar somente quando houver espaço.</p>
+                    <h4 class="tituloQuaternario">Método includes</h4>
+                        <p class="textoConteudo">Utilizando o <strong>método <code>includes</code></strong> é possível saber se a variável possui algo em específico.</p>
+                        <p class="textoExemplo">Exemplo:</p>
+                            <code class="codeStyle">
+                                frase.includes("mundo");
+                            </code>
+                    
+                    <h4 class="tituloQuaternario">Método startsWith</h4>
+                        <p class="textoConteudo">Com esse método, podemos descobrir se a variável começa com algo em específico</p>
+                            <code class="codeStyle">
+                                frase.startsWith("O") //vai retornar o valor booleano true
+                            </code>
+                    
+                    <h4 class="tituloQuaternario">Método endsWith</h4>
+                        <p class="textoConteudo">Com esse método, podemos descobrir se a variável termina com algo em específico</p>
+                        <code class="codeStyle">
+                            frase.endsWith("m") //vai retornar o valor booleano false
+                        </code> 
+                    
+                    <h4 class="tituloQuaternario">Método replace</h4>
+                        <p class="textoConteudo">É possível fazer modificações na variável String utilizando esse método.</p>
+                        <p class="textoExemplo">Exemplo:</p>
+                        <pre>
+                            <code class="codeStyle">
+                                frase.replace(",", "!"); // vai retornar uma string modificada: Olá! mundo.
+                            </code>
+                        </pre>
+                        <p class="textoConteudo">Ele retorna um valor modificado. E se quisermos utilizar esse valor modificado é preciso atribuí-lo a um endereço de memória</p>
+                        <p class="textoExemplo">Exemplo:</p>
+                        <pre>
+                            <code class="codeStyle">
+                                let stringModificada = frase.replace(",", "!"); 
+                            </code>
+                        </pre>
+                </div>
+
+                <div class="resumoString">
+                    <h2 class="tituloSecundario" id="tituloResumo">Resumo</h2>
+                        <p class="textoConteudo" id="conteudoResumo">Existem muitos métodos que auxiliam ao fazer operações com dados de textos. É possível consultá-los procurando a documentação da linguagem JavaScript.</p>
+                        <ul> Alguns métodos das Strings:
+                            <li>Concatenação</li>
+                            <li>Propriedade length</li>
+                            <li>Iterabilidade</li>
+                            <li>Formatação</li>
+                            <li>Index de letras</li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
