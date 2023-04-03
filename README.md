@@ -2,11 +2,11 @@
 
 ## 📚 Meus estudos sobre JavaScript
 
-Olá, pessoal! 👋
+Olá, pessoal!  👋
 
-📓 Neste repositório incluirei conteúdos sobre meu estudo pessoal a respeito de JavaScript.
+Neste repositório incluirei conteúdos sobre meu estudo pessoal a respeito de JavaScript. 📓
 
-🚧 Estará em constante atualização.
+Estará em constante atualização.  🚧 
 
 ##
 
@@ -19,6 +19,6 @@ Olá, pessoal! 👋
 
 Hey guys! 👋
 
-📓 In this repository I will include content about my personal study of JavaScript.
+In this repository I will include content about my personal study of JavaScript. 📓
 
-🚧 Will be constantly updated.
+Will be constantly updated. 🚧
